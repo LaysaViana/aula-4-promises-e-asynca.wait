@@ -9,77 +9,40 @@
 const timeout = (ms: number): Promise<void> => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
-// const P = new Promise<void>((resolve, reject) => {
 
-// })
 
-// P.then(() =>{
-// console.log("promessa concluída")
-// }).catch(() =>{
-//   console.log("Não cumpri a promessa")
-// })
 const desafio1asRosasNaoFalam = async () => {
   type callbackFn = () => void;
   const geraIntervaloAleatório = (): number => Math.floor(Math.random() * 3 * 1000);
 
   // métodos de versos. Estes métodos deverão ser modificados.
-  const queixoMeAsRosas = () => {
-    return new Promise<void>((resolve, reject) => {
-      timeout(geraIntervaloAleatório()).then(() => {
-        console.log('Queixo-me às rosas');
-        resolve()
-      }).catch(() => {
-        reject()
-      })
-    })
+  const queixoMeAsRosas = async () => {
+    await timeout(geraIntervaloAleatório())
+    console.log('Queixo-me às rosas');
 
   };
 
-  const masQueBobagem = () => {
-    return new Promise<void>((resolve, reject) => {
-      timeout(geraIntervaloAleatório()).then(() => {
-        console.log('Mas que bobagem');
-        resolve()
-      }).catch(() => {
-        reject()
-      })
-    })
+  const masQueBobagem = async () => {
+    await timeout(geraIntervaloAleatório())
+    console.log('Mas que bobagem');
 
   };
 
-  const asRosasNaoFalam = () => {
-    return new Promise<void>((resolve, reject) => {
-      timeout(geraIntervaloAleatório()).then(() => {
-        console.log('As rosas não falam');
-        resolve()
-      }).catch(() => {
-        reject()
-      })
-    })
+  const asRosasNaoFalam = async () => {
+    await timeout(geraIntervaloAleatório())
+    console.log('As rosas não falam');
 
   };
 
-  const simplesmenteAsRosasExalam = () => {
-    return new Promise<void>((resolve, reject) => {
-      timeout(geraIntervaloAleatório()).then(() => {
-        console.log('Simplesmente as rosas exalam');
-        resolve()
-      }).catch(() => {
-        reject()
-      })
-    })
+  const simplesmenteAsRosasExalam = async () => {
+    await timeout(geraIntervaloAleatório())
+    console.log('Simplesmente as rosas exalam');
 
   };
 
-  const oPerfumeQueRoubamDeTi = () => {
-    return new Promise<void>((resolve, reject) => {
-      timeout(geraIntervaloAleatório()).then(() => {
-        console.log('O perfume que roubam de ti, ai');
-        resolve()
-      }).catch(() => {
-        reject()
-      })
-    })
+  const oPerfumeQueRoubamDeTi = async () => {
+    await timeout(geraIntervaloAleatório())
+    console.log('O perfume que roubam de ti, ai');
 
   };
 
